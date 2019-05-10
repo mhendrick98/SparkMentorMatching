@@ -1,7 +1,7 @@
 import csv
 
-def prepareTeams():
-    with open("student_to_mentors_csv.csv", mode="r") as csv_file:
+def prepareTeams(filename):
+    with open(filename, mode="r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         line_count = 0
         res = ""
@@ -22,8 +22,8 @@ def prepareTeams():
         f.write(res)
         f.close()
 
-def prepareMentors():
-    with open("mentors_to_students.csv", mode="r") as csv_file:
+def prepareMentors(filename):
+    with open(filename, mode="r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         line_count = 0
         res = ""

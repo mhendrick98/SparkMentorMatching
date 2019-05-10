@@ -87,21 +87,21 @@ class Matcher:
                     return False
         return True
 
-#format input
-formatInput.prepareMentors()
-formatInput.prepareTeams()
+# #format input
+# formatInput.prepareMentors()
+# formatInput.prepareTeams()
 
-# the men and their list of ordered spousal preferences
-M = dict((m, prefs.split(', ')) for [m, prefs] in (line.rstrip().split(': ')
-                                for line in open('Teams.txt')))
+# # the men and their list of ordered spousal preferences
+# M = dict((m, prefs.split(', ')) for [m, prefs] in (line.rstrip().split(': ')
+#                                 for line in open('Teams.txt')))
 
-# the women and their list of ordered spousal preferences
-W = dict((m, prefs.split(', ')) for [m, prefs] in (line.rstrip().split(': ')
-                                for line in open('Mentors.txt')))
+# # the women and their list of ordered spousal preferences
+# W = dict((m, prefs.split(', ')) for [m, prefs] in (line.rstrip().split(': ')
+#                                 for line in open('Mentors.txt')))
 
-# initialize Matcher with preference lists for both men and women
-match = Matcher(M, W)
+# # initialize Matcher with preference lists for both men and women
+# match = Matcher(M, W)
 
-wives = match()
+# wives = match()
 
-print(match.pairs)
+# print(match.pairs)
